@@ -1,7 +1,9 @@
 :root {
   --primary-font-color: #313131;
-  --default-btn-color: #1f1f1f;
+  --dark-btn-color: #1f1f1f;
   --hover-btn-color: #fbce51;
+  --primary-font-family: "Merriweather", serif;
+  --secondary-font-family: "Golos Text", sans-serif;
 }
 
 .container {
@@ -9,13 +11,6 @@
   margin: 0;
   padding: 0;
 }
-/* .hero {
-  height: 881px;
-  background-color: #fff;
-  background-image: url("./assets/images/bg.png");
-  background-size: cover;
-  mix-blend-mode: color-burn;
-} */
 
 .hero {
   height: 881px;
@@ -24,4 +19,61 @@
   background-size: cover;
   background-position: center;
   background-blend-mode: color-burn;
+}
+
+.hero__title {
+  font-family: var(--primary-font-family);
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 110%;
+  text-transform: uppercase;
+  color: var(--primary-font-color);
+}
+
+.hero__description {
+  font-family: var(--secondary-font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  text-align: center;
+  color: var(--primary-font-color);
+}
+
+.hero__buttons {
+  display: flex;
+}
+
+.hero__button {
+  border-radius: 66px;
+  padding: 20px;
+  width: 263px;
+  height: 72px;
+  font-family: var(--secondary-font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero__button--dark {
+  background: var(--dark-btn-color);
+  color: #fff;
+  border: none;
+}
+
+.hero__button--dark:hover {
+  background: var(--hover-btn-color);
+  color: var(--primary-font-color);
+}
+
+.hero__button--light {
+  background: transparent;
+  border: 2px solid var(--dark-btn-color);
+  color: var(--primary-font-color);
+}
+
+.hero__button--light:hover {
+  background: var(--dark-btn-color);
+  color: #fff;
 }
